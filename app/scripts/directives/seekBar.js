@@ -10,7 +10,7 @@
  };
 
   return {
-       templateUrl: '/templates/directives/seek_bar.html',
+       templateUrl: '/scripts/directives/seek_bar.html',
        replace: true,
        restrict: 'E',
        scope: { },
@@ -30,6 +30,10 @@
               scope.fillStyle = function() {
                   return {width: percentString()};
               };
+
+              scope.thumbStyle = function() {
+                return {left: percentString()};
+              }
 
               scope.onClickSeekBar = function(event) {
             var percent = calculatePercent(seekBar, event);
@@ -52,7 +56,7 @@
 
          }
       };
-  )
+
     }
 
    angular
