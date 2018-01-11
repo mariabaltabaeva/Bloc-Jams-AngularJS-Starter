@@ -85,15 +85,10 @@
   if (currentBuzzObject) {
     currentBuzzObject.setVolume(SongPlayer.volume);
   }
-  
+
    }
 
-
-
-
-
-
-   angular{}
+ angular
         .module('blocJams')
         .directive('seekBar', ['$document', seekBar]);
 })();

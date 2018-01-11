@@ -72,10 +72,7 @@
       song.playing = true;
    };
 
-       SongPlayer.currentSong = null;
-     }
-
-       var stopSong = function() {
+       var stopSong = function(song) {
         currentBuzzObject.stop();
         song.playing = null;
       };
@@ -162,5 +159,5 @@
 
     angular
         .module('blocJams')
-        .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer);
+        .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
 })();
