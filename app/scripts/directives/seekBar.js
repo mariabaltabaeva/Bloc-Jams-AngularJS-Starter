@@ -75,7 +75,7 @@
          }
       };
 
-    }
+    
 
     scope.SongPlayer.setVolume = function(event) {
    SongPlayer.volume = event;

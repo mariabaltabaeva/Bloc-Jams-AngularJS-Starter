@@ -53,7 +53,6 @@
 * @type {Object}
 */
         SongPlayer.currentSong = null;
- };
 
  /**
  * @desc Current playback time (in seconds) of currently playing song
