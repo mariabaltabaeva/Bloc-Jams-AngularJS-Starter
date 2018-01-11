@@ -67,7 +67,7 @@
 * @desc play current Buzz object and set property of song to true.
 * @param {Object} song
 */
-     var playSong = function () {
+     var playSong = function (song) {
       currentBuzzObject.play();
       song.playing = true;
    };
@@ -88,7 +88,7 @@
         song = song || SongPlayer.currentSong;
            if (SongPlayer.currentSong !== song) {
              setSong(song);
-             playSong();
+             playSong(song);
        }  else if (SongPlayer.currentSong === song) {
          if (currentBuzzObject.isPaused()) {
              currentBuzzObject.play();
