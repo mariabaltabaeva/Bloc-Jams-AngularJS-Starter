@@ -21,7 +21,9 @@
    var setSong = function(song) {
     if (currentBuzzObject) {
         currentBuzzObject.stop();
-        SongPlayer.currentSong.playing = null;
+      currentBuzzObject.unbind('ended');
+      currentBuzzObject.unbind('timeupdate');
+      SongPlayer.currentSong.playing = null;
     }
 
     currentBuzzObject = new buzz.sound(song.audioUrl, {
@@ -34,6 +36,8 @@
             SongPlayer.currentTime = currentBuzzObject.getTime();
         });
     });
+    
+   currentBuzzObject.bind('ended', SongPlayer.next);
 
         SongPlayer.currentSong = song;
 };
@@ -151,7 +155,6 @@
          currentBuzzObject.setTime(time);
      }
  };
-
 
          return SongPlayer;
     }

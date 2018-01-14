@@ -75,7 +75,7 @@
          }
       };
 
-    
+
 
     scope.SongPlayer.setVolume = function(event) {
    SongPlayer.volume = event;
@@ -86,6 +86,9 @@
     currentBuzzObject.setVolume(SongPlayer.volume);
   }
 
+      var volumeMute = function() {
+        if (currentBuzzObject.setVolume == 0);
+      }
    }
 
  angular
